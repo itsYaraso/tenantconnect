@@ -1,22 +1,21 @@
-import React, { createContext, useContext } from "react";
-import TenantItem from "../tenants/TenantItem";
+import { UUID } from "crypto";
+import React, { createContext, SetStateAction, useContext } from "react";
 
-interface tenantitem {
-  tenant: {
-    id: number;
-    name: string;
-    property: string;
-    image: string;
-  };
+interface TenantItemInfo {
+  id: UUID[];
+  name: string;
+  property: string;
+  image_url: string;
 }
 
-const TenantContext = createContext<tenantitem>({} as tenantitem);
+
+const TenantContext = createContext<TenantItemInfo>({} as TenantItemInfo);
 
 export const useTenantContext = () => useContext(TenantContext);
 
 export function TenantContextProvider(props: React.PropsWithChildren) {
   const value = {
-    TenantItem,
+    TenantItemInfo,
   };
 
   return (

@@ -1,6 +1,7 @@
-import React, { createContext, useContext} from 'react'
+import React, { createContext, useContext } from "react";
 
 interface TaskItem {
-    Task: string[];
-    setTask: React.Dispatch<React.SetStateAction<string[]>>;
+  task: string[];
+  setTask: React.Dispatch<React.SetStateAction<string[]>>;
+  deleteTask: (index: number) => void;
 }

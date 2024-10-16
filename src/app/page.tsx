@@ -1,7 +1,7 @@
+"use client"
 import Header from "./components/Header";
 import NavMenu from "./components/NavMenu";
-import TaskBox from "./components/TaskBox";
-import TaskList from "./components/TaskList";
+import Script from "next/script";
 
 export default function App() {
   return (
@@ -9,7 +9,6 @@ export default function App() {
       <Header />
       <div className="flex">
       <NavMenu />
-      <TaskList />
       </div>
     </div>
   );
