@@ -12,6 +12,7 @@ const [loginstatus, setLoginStatus] = useState(false)
 
 const getLogin = () => {
     localStorage.getItem("LOGIN_STATUS")
+    setLoginStatus
 }
 
 const setLogin = () => {
@@ -24,7 +25,6 @@ const UserContext = createContext<UserInfo>({} as UserInfo);
 
 export function UserContextProvider(props: React.PropsWithChildren) {
   const value = {
-    UserInfo
   };
 
   return (
