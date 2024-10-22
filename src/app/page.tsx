@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="">
       <Header />
-      <div className="flex">
+      <div className="">
       <NavMenu />
       </div>
     </div>
