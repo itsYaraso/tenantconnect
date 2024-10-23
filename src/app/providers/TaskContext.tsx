@@ -15,13 +15,9 @@ const TaskContext = createContext({} as TaskItem);
 export const useTaskContext = () => useContext(TaskContext);
 
 export function TaskContextProvider(props: React.PropsWithChildren) {
-  const value = {
-    
-  };
+  const value = {};
 
   return (
-    <TaskContext.Provider value={value}>
-      {props.children}
-      </TaskContext.Provider>
+    <TaskContext.Provider value={value}>{props.children}</TaskContext.Provider>
   );
 }

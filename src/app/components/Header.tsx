@@ -9,9 +9,7 @@ export default function Header() {
           <HousePlug />
         </button>
       </Link>
-        <button className="hidden md:flex">
-          TENANT CONNECT
-        </button>
+      <button className="hidden md:flex">TENANT CONNECT</button>
       <div className="gap-2 flex justify-end w-full">
         <button className="border border-slate-800 p-2">
           <Bell />
