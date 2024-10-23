@@ -1,9 +1,14 @@
-export default function TenantItem() {
+import { TenantItemInfo } from "../providers/TenantContext";
+
+export default function TenantItem(props: TenantItemInfo) {
+
   return (
     <div className="border border-transparent rounded  mb-2 bg-slate-700 max-h-36 flex">
-      <img src="https://dentistadvisors.com/wp-content/uploads/2023/12/20231129_DentistAdvisors_HeadShots_JakeElm_9772-e1703187575470-566x680.jpg" className="max-w-24 m-4"></img>
-      <p className="pr-2 pl-2">Name</p>
-      <p className="pr-2 pl-2">Rent</p>
+
+      <img src={props.image_url} className="max-w-24 m-4"></img>
+      <p className="pr-2 pl-2">{props.name}</p>
+      <p className="pr-2 pl-2">{props.property}</p>
+      <p className="pr-2 pl-2">{props.property}</p>
       <button></button>
     </div>
   );

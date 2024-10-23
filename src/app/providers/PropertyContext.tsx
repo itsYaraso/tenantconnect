@@ -15,13 +15,14 @@ const propertyInfoArray: Array<PropertyInfo> = [
     {id: randomUUID(), image_url: "test", location: "test", rentprice: "test", sqrft: "test", bedrooms: 1}
   ]
 
-
 const PropertyContext = createContext<PropertyInfo>({} as PropertyInfo);
 
 export const usePropertyContext = () => useContext(PropertyContext);
 
 export function PropertyContextProvider(props: React.PropsWithChildren) {
+    
   const value = {
+    propertyInfoArray
   };
 
   return (
