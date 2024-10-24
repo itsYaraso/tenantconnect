@@ -1,3 +1,4 @@
+"use client"
 import Header from "../components/Header";
 import NavMenu from "../components/NavMenu";
 import { PropertyContextProvider } from "../providers/PropertyContext";
@@ -8,10 +9,10 @@ export default function Properties() {
       <PropertyContextProvider>
         <div className="">
         <Header />
-        <div className="flex gap-24">
+        <div className="flex">
         <NavMenu />
-        </div>
         <PropertyList />
+        </div>
       </div>
       </PropertyContextProvider>
     );

@@ -1,3 +1,4 @@
+"use client"
 import Header from "../components/Header";
 import NavMenu from "../components/NavMenu";
 import { TenantContextProvider } from "../providers/TenantContext";
