@@ -1,9 +1,8 @@
 "use client";
-import { randomUUID, UUID } from "crypto";
 import React, { createContext, SetStateAction, useContext } from "react";
 
-interface PropertyInfo {
-  id: UUID;
+export interface PropertyInfo {
+  id: number;
   image_url: string;
   location: string;
   rentprice: string;
@@ -11,9 +10,13 @@ interface PropertyInfo {
   bedrooms: number;
 }
 
+interface PropertyContextType {
+  propertyInfoArray: Array<PropertyInfo>;
+}
+
 const propertyInfoArray: Array<PropertyInfo> = [
   {
-    id: randomUUID(),
+    id: 1,
     image_url: "test",
     location: "test",
     rentprice: "test",
@@ -22,9 +25,10 @@ const propertyInfoArray: Array<PropertyInfo> = [
   },
 ];
 
-const PropertyContext = createContext<PropertyInfo>({} as PropertyInfo);
+const propertyContext = createContext<PropertyContextType>( {} as PropertyContextType
+);
 
-export const usePropertyContext = () => useContext(PropertyContext);
+export const usePropertyContext = () => useContext(propertyContext);
 
 export function PropertyContextProvider(props: React.PropsWithChildren) {
   const value = {
@@ -32,8 +36,8 @@ export function PropertyContextProvider(props: React.PropsWithChildren) {
   };
 
   return (
-    <PropertyContext.Provider value={value}>
+    <propertyContext.Provider value={value}>
       {props.children}
-    </PropertyContext.Provider>
+    </propertyContext.Provider>
   );
 }
