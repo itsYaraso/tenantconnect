@@ -4,7 +4,7 @@ import NavMenu from "./components/NavMenu";
 
 export default function App() {
   return (
-    <div className="">
+    <div className="overscroll-none">
       <Header />
       <div className="">
         <NavMenu />

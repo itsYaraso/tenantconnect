@@ -31,6 +31,22 @@ const propertyInfoArray: Array<PropertyInfo> = [
     sqrft: "test",
     bedrooms: 1,
   },
+  {
+    id: 3,
+    image_url: "test",
+    location: "test",
+    rentprice: "test",
+    sqrft: "test",
+    bedrooms: 1,
+  },
+  {
+    id: 4,
+    image_url: "test",
+    location: "test",
+    rentprice: "test",
+    sqrft: "test",
+    bedrooms: 1,
+  },
 ];
 
 const propertyContext = createContext<PropertyContextType>( {} as PropertyContextType

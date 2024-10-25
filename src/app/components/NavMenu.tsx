@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function NavMenu() {
   return (
-    <div className="flex flex-col bg-slate-700 justify-center gap-12 p-6 h-full w-20">
+    <div className="flex flex-col bg-slate-700 justify-center gap-12 p-6 h-full w-20 overscroll-none">
       <Link href="/tenants">
         <button>
           <Users />

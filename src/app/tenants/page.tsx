@@ -7,7 +7,6 @@ import TenantList from "./TenantList";
 export default function Tenants() {
     return(
       <TenantContextProvider>
-
         <div className="">
         <Header />
         <div className="flex">
