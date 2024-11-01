@@ -5,7 +5,7 @@ export interface TenantItemInfo {
   id: number;
   name: string;
   property: string;
-  image_url: string;
+  image_url: string | null;
 }
 
 interface TenantContextType {
@@ -13,7 +13,7 @@ interface TenantContextType {
 }
 
 const tenantiteminfoarray: Array<TenantItemInfo> = [
-  { id: 1, name: "George", property: "test", image_url: "https://i.pinimg.com/736x/38/93/07/389307d6af5c4be0051b7d3c4f93bf3d.jpg" },
+  { id: 1, name: "George", property: "test", image_url: "" },
   { id: 2, name: "Billy", property: "test", image_url: "https://i.pinimg.com/736x/38/93/07/389307d6af5c4be0051b7d3c4f93bf3d.jpg" },
   { id: 3, name: "Justin", property: "test", image_url: "https://i.pinimg.com/736x/38/93/07/389307d6af5c4be0051b7d3c4f93bf3d.jpg" },
   { id: 4, name: "Rose", property: "test", image_url: "https://th.bing.com/th/id/R.14f6725d26bdd1c08d671556819fa78b?rik=PefFmlprW6kzjg&pid=ImgRaw&r=0" },
