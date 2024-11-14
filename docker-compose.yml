@@ -11,6 +11,8 @@ services:
  
   db:
     image: postgres:16.0-alpine3.18
+    ports: 
+      - "5432:5432"
     restart: always
     environment:
       POSTGRES_USER: postgres
@@ -21,9 +23,20 @@ services:
       interval: 1s
       timeout: 5s
       retries: 10
- 
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - "8080:8080"
+
+  requestly:
+      image: hoppscotch/hoppscotch
+      container_name: hoppscotch_container
+      restart: always
+      ports:
+        - "3001:3001"
+
+  pgadmin:
+      image: dpage/pgadmin4:latest
+      container_name: pgadmin4_container
+      restart: always
+      ports:
+        - "8888:80"
+      environment:
+        PGADMIN_DEFAULT_EMAIL: benshigregg@gmail.com
+        PGADMIN_DEFAULT_PASSWORD: admin

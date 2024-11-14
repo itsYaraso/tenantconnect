@@ -1,23 +1,15 @@
-import { UUID } from "crypto";
 import React, { createContext, SetStateAction, useContext, useState } from "react";
 
 interface UserInfo {
-  loginstatus: boolean
-  setLoginStatus: React.Dispatch<React.SetStateAction<boolean>>
+  name: string;
+  userName: string;
+  userId: number;
+  isLandlord: boolean;
+  property?: string
+  userType: string;
 }
 
 export const useUserContext = () => useContext(UserContext);
-
-const [loginstatus, setLoginStatus] = useState(false)
-
-const getLogin = () => {
-    localStorage.getItem("LOGIN_STATUS")
-    setLoginStatus
-}
-
-const setLogin = () => {
-    localStorage.setItem("LOGIN_STATUS", loginstatus.toString())
-}
 
 const UserContext = createContext<UserInfo>({} as UserInfo);
 
